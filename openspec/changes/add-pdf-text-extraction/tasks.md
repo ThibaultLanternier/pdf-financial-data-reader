@@ -13,9 +13,9 @@
 
 ## 3. Snapshot building
 
-- [ ] 3.1 Implement page splitting (strip one trailing `\f`, split on `\f`, check the count against `pdfinfo`) and no-text-layer detection in `snapshot.py`; verify with unit tests covering a trailing form feed, an empty middle page, a count mismatch and whitespace-only text
-- [ ] 3.2 Build the snapshot document (`schema_version`, `source` with base name / streamed SHA-256 / page count, `extraction` with UTC `...Z` timestamp / tool / version / `layout`, `pages`) in the fixed key order; verify with tests asserting every field from the "JSON document structure", "Extraction timestamp" and "Tool version" requirements
-- [ ] 3.3 Implement atomic JSON writing (UTF-8, `ensure_ascii=False`, indent 2, trailing newline, temp file then `os.replace`) to `<file name>.json`; verify with tests that `€` is stored unescaped, that re-writing overwrites, and that two runs on the same PDF differ only in `extracted_at`
+- [x] 3.1 Implement page splitting (strip one trailing `\f`, split on `\f`, check the count against `pdfinfo`) and no-text-layer detection in `snapshot.py`; verify with unit tests covering a trailing form feed, an empty middle page, a count mismatch and whitespace-only text
+- [x] 3.2 Build the snapshot document (`schema_version`, `source` with base name / streamed SHA-256 / page count, `extraction` with UTC `...Z` timestamp / tool / version / `layout`, `pages`) in the fixed key order; verify with tests asserting every field from the "JSON document structure", "Extraction timestamp" and "Tool version" requirements
+- [x] 3.3 Implement atomic JSON writing (UTF-8, `ensure_ascii=False`, indent 2, trailing newline, temp file then `os.replace`) to `<file name>.json`; verify with tests that `€` is stored unescaped, that re-writing overwrites, and that two runs on the same PDF differ only in `extracted_at`
 
 ## 4. CLI
 
