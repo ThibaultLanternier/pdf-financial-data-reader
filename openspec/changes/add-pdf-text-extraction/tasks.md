@@ -19,9 +19,9 @@
 
 ## 4. CLI
 
-- [ ] 4.1 Implement `cli.py`: argparse (`input_dir`, `-o/--output` defaulting to `./output`), validating the input directory (exit 2), checking the tools up front (exit 2), and a sorted, non-recursive, case-insensitive `.pdf` scan; verify with tests for a missing directory, a file passed instead of a directory, mixed-case extensions, an ignored subdirectory and an empty directory (exit 0)
-- [ ] 4.2 Implement the per-file loop with failure isolation, the per-file outcome lines, the final succeeded/failed summary, and exit codes 0/1; verify with an end-to-end test on a directory containing a good, a corrupt and a text-less PDF (exit 1, only the good JSON written, both failures named on stderr)
-- [ ] 4.3 Write `README.md` covering the poppler-utils prerequisite, installation, CLI usage, the output JSON format with an example, and the exit codes; verify that the documented commands run as written against a synthetic fixture directory
+- [x] 4.1 Implement `cli.py`: argparse (`input_dir`, `-o/--output` defaulting to `./output`), validating the input directory (exit 2), checking the tools up front (exit 2), and a sorted, non-recursive, case-insensitive `.pdf` scan; verify with tests for a missing directory, a file passed instead of a directory, mixed-case extensions, an ignored subdirectory and an empty directory (exit 0)
+- [x] 4.2 Implement the per-file loop with failure isolation, the per-file outcome lines, the final succeeded/failed summary, and exit codes 0/1; verify with an end-to-end test on a directory containing a good, a corrupt and a text-less PDF (exit 1, only the good JSON written, both failures named on stderr)
+- [x] 4.3 Write `README.md` covering the poppler-utils prerequisite, installation, CLI usage, the output JSON format with an example, and the exit codes; verify that the documented commands run as written against a synthetic fixture directory
 
 ## 5. Integration check
 
