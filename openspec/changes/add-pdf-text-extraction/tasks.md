@@ -2,8 +2,8 @@
 
 ## 1. Project scaffolding
 
-- [ ] 1.1 Add `pyproject.toml` (Python ≥ 3.12, no runtime dependencies, dev extras `pytest` and `ruff`, console script `pdf-extract = "pdf_extractor.cli:main"`) and the empty `src/pdf_extractor/` package with `__init__.py` and `__main__.py`; verify `pip install -e '.[dev]'` succeeds and `python -m pdf_extractor --help` runs
-- [ ] 1.2 Add `.gitignore` covering `pdfs/`, `output/`, virtualenvs and Python caches; verify `git status` does not list the sample PDFs
+- [x] 1.1 Add `pyproject.toml` (Python ≥ 3.12, no runtime dependencies, dev extras `pytest` and `ruff`, console script `pdf-extract = "pdf_extractor.cli:main"`) and the empty `src/pdf_extractor/` package with `__init__.py` and `__main__.py`; verify `pip install -e '.[dev]'` succeeds and `python -m pdf_extractor --help` runs
+- [x] 1.2 Add `.gitignore` covering `pdfs/`, `output/`, virtualenvs and Python caches; verify `git status` does not list the sample PDFs
 
 ## 2. Poppler integration
 

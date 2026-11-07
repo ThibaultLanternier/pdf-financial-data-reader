@@ -1,2 +1,16 @@
 # Local PDF statements (personal financial data, never commit)
 pdfs/
+
+# Generated snapshots (derived from personal statements)
+output/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
