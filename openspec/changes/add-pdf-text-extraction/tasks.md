@@ -7,9 +7,9 @@
 
 ## 2. Poppler integration
 
-- [ ] 2.1 Implement tool discovery and version detection in `poppler.py` (both binaries on PATH, `pdftotext -v` parsed from stdout or stderr, error when missing or unparsable); verify with unit tests that stub the subprocess layer for found / missing / unparsable cases
-- [ ] 2.2 Implement the `pdfinfo` page-count call and the `pdftotext -layout -enc UTF-8 <file> -` call, both with argument lists and a 60 s timeout, raising a per-file error on non-zero exit or timeout; verify with unit tests for success, non-zero exit and timeout
-- [ ] 2.3 Add a test helper that writes synthetic PDFs (multi-page text, a text-less page or file, corrupt bytes) using only the standard library; verify the generated files open with `pdfinfo` and that a known line comes back from `pdftotext -layout`
+- [x] 2.1 Implement tool discovery and version detection in `poppler.py` (both binaries on PATH, `pdftotext -v` parsed from stdout or stderr, error when missing or unparsable); verify with unit tests that stub the subprocess layer for found / missing / unparsable cases
+- [x] 2.2 Implement the `pdfinfo` page-count call and the `pdftotext -layout -enc UTF-8 <file> -` call, both with argument lists and a 60 s timeout, raising a per-file error on non-zero exit or timeout; verify with unit tests for success, non-zero exit and timeout
+- [x] 2.3 Add a test helper that writes synthetic PDFs (multi-page text, a text-less page or file, corrupt bytes) using only the standard library; verify the generated files open with `pdfinfo` and that a known line comes back from `pdftotext -layout`
 
 ## 3. Snapshot building
 
