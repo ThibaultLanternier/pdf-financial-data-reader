@@ -62,9 +62,10 @@ class TestRun:
         assert cli.main([str(src), "-o", str(out)]) == 0
 
         assert sorted(p.name for p in out.iterdir()) == ["a.pdf.json", "b.pdf.json"]
-        assert json.loads((out / "b.pdf.json").read_text(encoding="utf-8"))["source"][
-            "page_count"
-        ] == 2
+        assert (
+            json.loads((out / "b.pdf.json").read_text(encoding="utf-8"))["source"]["page_count"]
+            == 2
+        )
         stdout = capsys.readouterr().out.splitlines()
         assert stdout[0].startswith("OK   a.pdf -> ")
         assert stdout[1].startswith("OK   b.pdf -> ")

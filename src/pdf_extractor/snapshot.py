@@ -32,9 +32,7 @@ def split_pages(text: str, expected_pages: int) -> list[str]:
     return pages
 
 
-def build_snapshot(
-    path: Path, tool_version: str, now: datetime | None = None
-) -> dict[str, Any]:
+def build_snapshot(path: Path, tool_version: str, now: datetime | None = None) -> dict[str, Any]:
     """Extract the layout text of ``path`` and return the snapshot document."""
     page_count = poppler.page_count(path)
     pages = split_pages(poppler.layout_text(path), page_count)

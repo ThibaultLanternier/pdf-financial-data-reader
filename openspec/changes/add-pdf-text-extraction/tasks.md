@@ -25,8 +25,8 @@
 
 ## 5. Integration check
 
-- [ ] 5.1 Run `pdf-extract pdfs/` on the real sample statements and confirm one JSON file is written per sample with `page_count` matching `pdfinfo`, that byte-identical copies share one `sha256`, and that the summary page holds the valuation figure seen during exploration; confirm the outputs stay out of git
-- [ ] 5.2 Run `ruff check` and `ruff format` on the whole project, with the full test suite green afterwards
+- [x] 5.1 Run `pdf-extract pdfs/` on the real sample statements and confirm one JSON file is written per sample with `page_count` matching `pdfinfo`, that byte-identical copies share one `sha256`, and that the summary page holds the valuation figure seen during exploration; confirm the outputs stay out of git
+- [x] 5.2 Run `ruff check` and `ruff format` on the whole project, with the full test suite green afterwards
 
 ## Workflow follow-up
 

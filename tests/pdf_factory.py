@@ -29,8 +29,7 @@ def make_pdf(path: Path, pages: list[list[str]]) -> Path:
         content = _content_stream(lines)
         objects[page_id] = (
             b"<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] "
-            b"/Resources << /Font << /F1 %d 0 R >> >> /Contents %d 0 R >>"
-            % (font_id, page_id + 1)
+            b"/Resources << /Font << /F1 %d 0 R >> >> /Contents %d 0 R >>" % (font_id, page_id + 1)
         )
         objects[page_id + 1] = b"<< /Length %d >>\nstream\n%s\nendstream" % (len(content), content)
 

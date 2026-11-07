@@ -59,15 +59,19 @@ class TestCheckTools:
 
 class TestPageCount:
     def test_success(self, fake_run):
-        calls = fake_run(_completed(stdout=b"Title:          x\nPages:          22\nEncrypted: no\n"))
+        pdfinfo_output = b"Title:          x\nPages:          22\nEncrypted:      no\n"
+        calls = fake_run(_completed(stdout=pdfinfo_output))
         assert poppler.page_count(Path("a.pdf")) == 22
         args, kwargs = calls[0]
         assert args == ["pdfinfo", "a.pdf"]
         assert kwargs["timeout"] == poppler.TIMEOUT_SECONDS
 
     def test_non_zero_exit(self, fake_run):
-        fake_run(_completed(stderr=b"Syntax Error: x\nSyntax Error: Couldn't read xref table\n",
-                            returncode=1))
+        fake_run(
+            _completed(
+                stderr=b"Syntax Error: x\nSyntax Error: Couldn't read xref table\n", returncode=1
+            )
+        )
         with pytest.raises(PdfError, match="exit 1.*Couldn't read xref table"):
             poppler.page_count(Path("bad.pdf"))
 
